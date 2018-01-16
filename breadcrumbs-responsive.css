@@ -1,0 +1,80 @@
+* {box-sizing: border-box;}
+
+#breadcrumbs-inner {
+	width: 80%; margin: auto;
+	display: block;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 1rem; 
+	border-radius: 5px 5px 0 0; 
+	background: #cd0000; /* Old browsers */
+	background: -moz-linear-gradient(top, #cd0000 0%, #008000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #cd0000 0%,#008000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #cd0000 0%,#008000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+#breadcrumbs-inner a {
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: none;
+	font-size: 12px;
+	line-height: 72px;
+	color: white;
+	padding: 0 10px 0 10px;
+	position: relative;
+	border-bottom: 3px solid white;	
+	font-family: Verdana, sans-serif;
+}
+
+#breadcrumbs-inner a:after {
+	content: '';
+	position: absolute;
+	bottom: -19px; 
+	right: 18px; 
+	width: 36px; 
+	height: 36px;
+	transform: scale(0.707) rotate(45deg);
+	z-index: 1;
+	background: rgba(255,255,255,0);
+	background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 51%);
+}
+
+#breadcrumbs-inner a:last-child {/*padding-right: 46px;*/}
+#breadcrumbs-inner a:last-child:after {/*background: #008000;*/}
+
+@media only screen and (min-width: 768px) {
+		
+	#breadcrumbs-inner {
+	border-radius: 5px 0 0 5px;
+	background: #cd0000;
+	background: -moz-linear-gradient(left, #cd0000 0%, #008000 100%);
+	background: -webkit-linear-gradient(left, #cd0000 0%,#008000 100%);
+	background: linear-gradient(to right, #cd0000 0%,#008000 100%);
+	display: inline-block;
+	/**/width: auto;
+	overflow: visible;	
+		
+}
+	#breadcrumbs-inner a {
+	float: left;
+	padding: 0 10px 0 60px;
+	border-bottom: 0px;
+}
+	#breadcrumbs-inner a::after {
+	top: 0;
+	right: -36px;
+	width: 72px;
+	height: 72px;
+	background: rgba(255,255,255,0);
+	box-shadow: 2px -2px 0 2px rgba(255,255,255);
+	border-radius: 0 5px 0 50px;
+	}
+
+	/**/
+	#breadcrumbs-inner a:last-child::after {
+	background: #008000;
+	z-index: -1;}
+
+}
